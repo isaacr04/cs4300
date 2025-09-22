@@ -1,4 +1,4 @@
-from ..src.task1 import helloworld
+from homework1.src.task1 import helloworld
 
 def test_helloworld(capsys):
     helloworld()

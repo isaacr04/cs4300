@@ -1,4 +1,4 @@
-from ..src.task3 import *
+from homework1.src.task3 import *
 
 def test_checksign():
     assert check_sign(15) == 1

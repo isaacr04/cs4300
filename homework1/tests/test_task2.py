@@ -1,4 +1,4 @@
-from ..src.task2 import demonstrateVariables
+from homework1.src.task2 import demonstrateVariables
 
 def test_demonstrateVariables():
     types = demonstrateVariables()
