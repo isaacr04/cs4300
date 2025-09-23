@@ -1,6 +1,7 @@
 from homework1.src.task6 import read_word_count
+from pathlib import Path
 
-filepath = 'src/task6_readme.txt'
+filepath = Path(__file__).parent.parent / 'src' / 'task6_readme.txt'
 
 # task6_readme.txt has 104 words
 def test_read_word_count():

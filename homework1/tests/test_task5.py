@@ -3,7 +3,11 @@ from homework1.src.task5 import favorite_books, slice_list, make_students
 def test_slice_list(capsys):
     slice_list(favorite_books)
     capture = capsys.readouterr()
-    assert capture.out == "[('Mother of Learning', 'Domagoj Kurmaić'), ('The Light of All That Falls', 'James Islington'), ('Golden Son', 'Pierce Brown')]\n"
+    assert capture.out == ("[('Mother of Learning', 'Domagoj Kurmaić'), "
+                           "('The Light of All That Falls', 'James Islington'), "
+                           "('Golden Son', 'Pierce Brown')]\n")
+    with capsys.disabled():
+        print('| Output: ' + capture.out, end='')
 
 
 def test_make_students():

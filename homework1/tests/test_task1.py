@@ -4,3 +4,5 @@ def test_helloworld(capsys):
     helloworld()
     captured = capsys.readouterr()
     assert captured.out == "Hello, World!\n"
+    with capsys.disabled():
+        print('| Output: ' + captured.out, end='')

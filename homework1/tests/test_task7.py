@@ -5,3 +5,5 @@ def test_request_example(capsys):
     capture = capsys.readouterr()
     assert capture.out == '''This domain is for use in illustrative examples in documents. You may use this
     domain in literature without prior coordination or asking for permission.\n'''
+    with capsys.disabled():
+        print('| Output: ' + capture.out, end='')
