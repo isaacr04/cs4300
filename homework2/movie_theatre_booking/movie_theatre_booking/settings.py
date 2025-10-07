@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-up=yok1p0=y@_9+c^6$8_@*+pt#ie0*wlx@e))dmr9#zzuo1ee
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'movie-theatre-booking.onrender.com']
 
 
 
