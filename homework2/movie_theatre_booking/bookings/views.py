@@ -23,12 +23,12 @@ def movie_list(request):
 
 def book_seat(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)
-    seats = Seat.objects.filter(booking_status=False)
+    seats = Seat.objects.filter(is_booked=False)
     if request.method == 'POST':
         user_name = request.POST.get('user')
         seat_id = request.POST.get('seat')
         seat = Seat.objects.get(pk=seat_id)
-        seat.booking_status = True
+        seat.is_booked = True
         seat.save()
         Booking.objects.create(
             movie=movie,

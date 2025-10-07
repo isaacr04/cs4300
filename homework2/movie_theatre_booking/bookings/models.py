@@ -10,11 +10,13 @@ class Movie(models.Model):
         return self.title
 
 class Seat(models.Model):
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='seats')
     seat_number = models.IntegerField()
-    booking_status = models.BooleanField(default=False)
+    is_booked = models.BooleanField(default=False)
 
     def __str__(self):
-        return f"Seat {self.seat_number}"
+        return f"Seat {self.seat_number} for {self.movie.title}"
+
 
 class Booking(models.Model):
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
